@@ -37,6 +37,8 @@ app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to Express & TypeScript Server");
 });
 
+app.get("/favicon.ico", (req: Request, res: Response) => res.status(204));
+
 // error handler middlewares
 app.use(apiErrorMiddleware);
 app.use(errorMiddleware);
